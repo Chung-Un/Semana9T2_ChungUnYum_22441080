@@ -27,7 +27,7 @@ public class cuentaBanco {
    void depositar(float monto,cuentaBanco cuenta){
     float test = cuenta.saldo + monto;
        
-       if(test<0){
+       if(monto<0){
        JOptionPane.showMessageDialog(null, "Numeros negativos", "Datos invalidos", JOptionPane.ERROR_MESSAGE);
        }
        else if(test>cuenta.limite){
@@ -45,7 +45,7 @@ public class cuentaBanco {
         if(monto<0){
         JOptionPane.showMessageDialog(null, "El monto a retirar es negativo","Numeros negativos", JOptionPane.ERROR_MESSAGE);
         }
-        if(test<0){
+        else if(test<0){
         JOptionPane.showMessageDialog(null, "Fondos insuficientes" , "Datos invalidos" , JOptionPane.ERROR_MESSAGE);
         }
         else{
